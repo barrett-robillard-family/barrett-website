@@ -1,3 +1,3 @@
-# [Barrett Family Website](https://barrett.website)
+# [Barrett Family Website](http://barrett.website)
 
 Is it working?
