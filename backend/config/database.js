@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DB_URL, {
+let dbSource = process.env.NODE_ENV === 'dev'
+  ? process.env.DB_DEV_URL
+  : process.env.DB_PROD_URL
+
+mongoose.connect(dbSource, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

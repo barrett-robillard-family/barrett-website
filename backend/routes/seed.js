@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
         let formattedMembers = members.map(m => ({
             firstName: m.firstName,
             lastName: m.lastName,
+            email: m.firstName+m.lastName.substr(0,1).toUpperCase()+m.lastName.substr(1)+'@gmail.com',
             pwd: m.firstName
         }));
         let promises = formattedMembers.map( member => new Promise((resolve, reject) => {
